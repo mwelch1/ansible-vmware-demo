@@ -1,0 +1,12 @@
+- name: Manage folders on given datacenter
+  vcenter_folder:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: "{{ vcenter_ssl }}"
+    datacenter: "{{ item.datacenter_name }}"
+    folder_name: "{{ item.folder_name }}"
+    folder_type: "{{ item.folder_type }}"
+    state: "{{ item.folder_state }}"
+  with_items:
+    - "{{ vcenter_folders }}"

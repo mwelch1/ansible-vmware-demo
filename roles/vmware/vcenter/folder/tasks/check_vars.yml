@@ -1,0 +1,34 @@
+- name: vcenter_hostname should be defined
+  assert:
+    that:
+      - vcenter_hostname is defined and vcenter_hostname != ''
+    msg: "'vcenter_hostname' is required"
+  when: vcenter_hostname is not defined or vcenter_hostname == ''
+
+- name: vcenter_username should be defined
+  assert:
+    that:
+      - vcenter_username is defined and vcenter_username != ''
+    msg: "'vcenter_username' is required"
+  when: vcenter_username is not defined or vcenter_username == ''
+
+- name: vcenter_password should be defined
+  assert:
+    that:
+      - vcenter_password is defined and vcenter_password != ''
+    msg: "'vcenter_password' is required"
+  when: vcenter_password is not defined or vcenter_password == ''
+
+- name: vcenter_ssl should be defined
+  assert:
+    that:
+      - vcenter_ssl is defined and vcenter_ssl != ''
+    msg: "'vcenter_ssl' is required"
+  when: vcenter_ssl is not defined or vcenter_ssl == ''
+
+- name: vcenter_folders should be defined
+  assert:
+    that:
+      - vcenter_folders is defined and vcenter_folders != ''
+    msg: "'vcenter_folders' is required"
+  when: vcenter_folders is not defined or vcenter_folders == ''

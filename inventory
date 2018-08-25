@@ -1,0 +1,4 @@
+localhost ansible_connection=local ansible_python_interpreter="/usr/bin/env python"
+
+[all:vars]
+run_role = "vmware/vcenter/folder"

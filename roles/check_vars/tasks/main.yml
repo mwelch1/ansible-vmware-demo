@@ -1,0 +1,8 @@
+---
+- name: run_role should be defined
+  assert:
+    that:
+    - run_role is defined and run_role != ''
+    msg: "Set the value of 'run_role' to the role name you want to run"
+  when: run_role is not defined or run_role == ''
+

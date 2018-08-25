@@ -1,8 +1,0 @@
----
-- name: Running
-  hosts: all
-  gather_facts: true
-  roles:
-    - { role: check_vars }
-    - { role: vmware/vcenter/folder, when: run_role == 'vmware/vcenter/folder' }
-

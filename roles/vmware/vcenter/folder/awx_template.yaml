@@ -1,0 +1,88 @@
+ask_job_type_on_launch: true
+asset_relation:
+  extra_credentials: []
+  notification_templates_error: []
+  notification_templates_success: []
+  roles:
+  - name: Read
+    team: []
+    user: []
+  - name: Execute
+    team: []
+    user: []
+  - name: Admin
+    team: []
+    user:
+    - admin
+  schedules: []
+  survey_spec:
+    description: ''
+    name: ''
+    spec:
+    - choices: ''
+      default: ''
+      max: 1024
+      min: 0
+      question_description: Enter run_role
+      question_name: Enter run_role
+      required: true
+      type: text
+      variable: run_role
+    - choices: ''
+      default: ''
+      max: 1024
+      min: 0
+      new_question: true
+      question_description: Enter vcenter_hostname
+      question_name: Enter vcenter_hostname
+      required: true
+      type: text
+      variable: vcenter_hostname
+    - choices: ''
+      default: ''
+      max: 1024
+      min: 0
+      new_question: true
+      question_description: Enter vcenter_username
+      question_name: Enter vcenter_username
+      required: true
+      type: text
+      variable: vcenter_username
+    - choices: ''
+      default: ''
+      max: 64
+      min: 0
+      new_question: true
+      question_description: Enter vcenter_password
+      question_name: Enter vcenter_password
+      required: true
+      type: password
+      variable: vcenter_password
+    - choices: 'True
+
+        False'
+      default: 'False'
+      max: null
+      min: null
+      new_question: true
+      question_description: Enter vcenter_ssl
+      question_name: Enter vcenter_ssl
+      required: true
+      type: multiplechoice
+      variable: vcenter_ssl
+    - choices: ''
+      default: ''
+      max: 4096
+      min: 0
+      new_question: true
+      question_description: Enter vcenter_folders
+      question_name: Enter vcenter_folders
+      required: true
+      type: textarea
+      variable: vcenter_folders
+asset_type: job_template
+inventory: localhost
+name: vmware/vcenter/folder
+playbook: run.yml
+project: ansible-vmware-demo
+survey_enabled: true

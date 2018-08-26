@@ -212,3 +212,7 @@ id job_template           created             status   elapsed
 40            7 2018-08-26T00:19:46.078648Z successful 16.593
 == ============ =========================== ========== =======
 ```
+
+### Sample chained job with concurrent runs
+
+![multi_job](https://github.com/mwelch1/ansible-vmware-demo/raw/master/chained_job.png)
